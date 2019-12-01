@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">IPB</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="anemia3">Di negara barat kadar hemoglobin paling rendah untuk laki-laki adalah 14 g/dl dan 12 g/dl pada perempuan dewasa pada permukaan laut. Peneliti lain memberikan angka yang berbeda yaitu 12 g/dl (hematokorit 38%) untuk perempuan dewasa. 11 g/dl (hematokorit 36%) untuk perempuan hamil, dan 13 g/dl untuk laki dewasa. g/dl (gram/100 militer darah)</string>
+    <string name="gejala1">Gejala anemia dapat digolongkan menjadi tiga jenis gejala, yaitu :</string>
+    <string name="anemia1">Anemia adalah keadaan yang ditandai dengan berkurangnya hemoglobin dalam tubuh. Di mana hemoglobin adalah suatu metaloprotein yaitu protein yang mengandung zat besi di dalam sel darah merah yang berfungsi sebagai pengangkut oksigen dari paru-paru ke seluruh tubuh.</string>
+    <string name="anemia2">Anemia menyebabkan berkurangnya jumlah sel darah merah atau jumlah hemoglobin dalam sel darah merah, sehingga darah tidak dapat mengangkut oksigen dalam jumlah sesuai yang diperlukan tubuh. </string>
+    <string name="penyebabutama">Anemia terjadi karena berbagai sebab, seperti defisiensi besi, defisiensi asam folat, vitamin B12 dan protein. Secara langsung anemia terutama disebabkan karena produksi/kualitas sel darah merah yang kurang dan kehilangan darah baik secara akut atau menahun.</string>
+
+    <string name="title_material_metaphor">Material is the metaphor</string>
+    <string name="title_material_bold">Bold, graphic, intentional</string>
+    <string name="title_material_motion">Motion provides meaning</string>
+    <string name="title_material_shadow">Light and shadow</string>
+
+    <string name="description_material_metaphor">A material metaphor is the unifying theory of a rationalized space and a system of motion. The material is grounded in tactile reality, inspired by the study of paper and ink, yet technologically advanced and open to imagination and magic.</string>
+    <string name="description_material_bold">The foundational elements of print-based design – typography, grids, space, scale, color, and use of imagery – guide visual treatments.</string>
+    <string name="description_material_motion">Motion respects and reinforces the user as the prime mover. Primary user actions are inflection points that initiate motion, transforming the whole design.</string>
+    <string name="description_material_shadow">Within the material environment, virtual lights illuminate the scene. Key lights create directional shadows, while ambient light creates soft shadows from all angles.</string>
+
+
+</resources>
