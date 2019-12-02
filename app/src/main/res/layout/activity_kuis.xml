@@ -1,77 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".ui.KuisActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/no"
-        android:textAlignment="center"
-        android:text="1"/>
-    <TextView
-        android:background="#2A4B2727"
-        android:id="@+id/soal"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:padding="20dp"
-        android:fontFamily="monospace"
-        android:textColor="#000"
-        android:minHeight="150dp"
-        android:text="@string/gejala1"
-        />
-    <RadioGroup
-        android:padding="10dp"
-        android:id="@+id/rgop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:background="@drawable/side_two"
-            android:fontFamily="monospace"
-            android:id="@+id/optiona"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <RadioButton
-            android:layout_marginTop="8dp"
-            android:background="@drawable/side_two"
-            android:fontFamily="monospace"
-            android:id="@+id/optionb"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <RadioButton
-            android:layout_marginTop="8dp"
-            android:background="@drawable/side_two"
-            android:fontFamily="monospace"
-            android:id="@+id/optionc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <RadioButton
-            android:layout_marginTop="8dp"
-            android:background="@drawable/side_two"
-            android:fontFamily="monospace"
-            android:id="@+id/optiond"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/submit"
-        android:layout_marginTop="20dp"
+        android:id="@+id/kuis_tv_nomer_soal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:shadowColor="@color/fbutton_color_pomegranate"
-        android:background="#EDEE8823"
-        android:pointerIcon="arrow"
-        android:textColor="#fff"
-        android:text="Submit" />
+        android:text="Soal ke : "
+        android:textColor="#000"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/kuis_tv_skor_jawaban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soal ke : "
+        android:textColor="#000"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="kuis_tv_skor_jawaban,kuis_tv_nomer_soal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kuis_tv_soal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/border_tv_soal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        app:layout_constraintVertical_bias="0.15"
+        tools:text="Ini adalah contoh soalnya gengs, segini panjangnya lhoo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/kuis_tv_tidak"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/border_tv_jawaban_tidak"
+        android:gravity="center"
+        android:text="TIDAK"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/kuis_tv_ya"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_tv_jawaban_ya"
+        android:gravity="center"
+        android:text="YA"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

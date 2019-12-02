@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/border_tv_soal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/vh_tv_soal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_tv_soal"
+        android:drawableRight="@drawable/ic_right_chevron"
+        android:padding="10dp"
+        tools:text="Soalnya kayak gini nih" />
+
+    <TextView
+        android:id="@+id/vh_tv_deskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="gone"
+        tools:text="Deskripsinya kayak gini nih dengerin yaa hahahahahahaha" />
+
+</LinearLayout>

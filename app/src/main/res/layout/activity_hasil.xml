@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.HasilActivity">
+
+    <TextView
+        android:id="@+id/hasil_tv_judul_jumlah_skor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JUMLAH SKOR"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hasil_tv_skor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hasil_tv_judul_jumlah_skor"
+        tools:text="100" />
+
+    <TextView
+        android:id="@+id/hasil_tv_judul_deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Deskripsi jawaban tidak"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hasil_tv_skor" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hasil_rv_deskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hasil_tv_judul_deskripsi"
+        app:layout_constraintVertical_bias="0"
+        tools:listitem="@layout/view_hasil" />
+
+    <ImageView
+        android:id="@+id/hasil_iv_empty"
+        android:layout_width="0dp"
+        android:padding="30dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="2:2"
+        app:layout_constraintTop_toBottomOf="@id/hasil_tv_judul_deskripsi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ic_empty_box"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
