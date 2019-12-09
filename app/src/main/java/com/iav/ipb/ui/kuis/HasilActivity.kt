@@ -1,4 +1,4 @@
-package com.iav.ipb.ui
+package com.iav.ipb.ui.kuis
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

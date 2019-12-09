@@ -1,4 +1,4 @@
-package com.iav.ipb.ui
+package com.iav.ipb.ui.kuis
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,7 +9,6 @@ import com.iav.ipb.R
 import com.iav.ipb.data.KuisData
 import kotlinx.android.synthetic.main.activity_kuis.*
 import org.jetbrains.anko.intentFor
-import org.jetbrains.anko.toast
 
 class KuisActivity : AppCompatActivity(), View.OnClickListener {
 
