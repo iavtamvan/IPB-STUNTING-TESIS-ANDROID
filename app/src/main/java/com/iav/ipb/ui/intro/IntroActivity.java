@@ -50,7 +50,8 @@ public class IntroActivity extends AppCompatActivity {
         layouts = new int[]{
                 R.layout.fragment_first,
                 R.layout.sklider_2,
-                R.layout.sklider_3};
+                R.layout.sklider_3,
+                R.layout.sklider_4};
 
         // adding bottom dots
         addBottomDots(0);
@@ -153,6 +154,7 @@ public class IntroActivity extends AppCompatActivity {
             window.setStatusBarColor(Color.TRANSPARENT);
         }
     }
+
     /**
      * View pager adapter
      */
