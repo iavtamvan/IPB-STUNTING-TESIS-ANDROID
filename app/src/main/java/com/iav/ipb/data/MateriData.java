@@ -33,16 +33,16 @@ public class MateriData {
     };
 
     private static int[] materiImages = {
-            R.drawable.ahmad_dahlan,
-            R.drawable.ahmad_yani,
-            R.drawable.bung_tomo,
-            R.drawable.gatot_subroto,
-            R.drawable.ki_hadjar_dewantara,
-            R.drawable.mohammad_hatta,
-            R.drawable.sudirman,
-            R.drawable.sukarno,
-            R.drawable.supomo,
-            R.drawable.tan_malaka
+//            R.drawable.ahmad_dahlan,
+//            R.drawable.ahmad_yani,
+//            R.drawable.bung_tomo,
+//            R.drawable.gatot_subroto,
+//            R.drawable.ki_hadjar_dewantara,
+//            R.drawable.mohammad_hatta,
+//            R.drawable.sudirman,
+//            R.drawable.sukarno,
+//            R.drawable.supomo,
+//            R.drawable.tan_malaka
     };
     public static ArrayList<MateriModel> getMateri(){
         MateriModel materiModel = null;

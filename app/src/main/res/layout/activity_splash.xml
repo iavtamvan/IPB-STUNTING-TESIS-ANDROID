@@ -10,14 +10,16 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/btn_minus"/>
+        android:src="@drawable/versi_6"
+        android:layout_weight="1"
+        android:scaleType="fitXY"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mulai"
         android:textColor="@android:color/white"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimary"
         android:id="@+id/btn_mulai"/>
 
 </LinearLayout>

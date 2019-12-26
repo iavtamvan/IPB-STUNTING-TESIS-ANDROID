@@ -55,6 +55,15 @@
     <color name="bg_slider_screen23">#203d8c</color>
     <color name="bg_slider_screen24">#203d8c</color>
     <color name="bg_slider_screen25">#203d8c</color>
+    <color name="bg_slider_screen26">#203d8c</color>
+    <color name="bg_slider_screen27">#203d8c</color>
+    <color name="bg_slider_screen28">#203d8c</color>
+    <color name="bg_slider_screen29">#203d8c</color>
+    <color name="bg_slider_screen30">#203d8c</color>
+    <color name="bg_slider_screen31">#203d8c</color>
+    <color name="bg_slider_screen32">#203d8c</color>
+    <color name="bg_slider_screen33">#203d8c</color>
+    <color name="bg_slider_screen34">#203d8c</color>
     <!-- dots inactive colors -->
     <color name="dot_inactive_screen1">#ffa000</color>
     <color name="dot_inactive_screen2">#008c57</color>
@@ -81,6 +90,15 @@
     <color name="dot_inactive_screen23">#0e1e49</color>
     <color name="dot_inactive_screen24">#0e1e49</color>
     <color name="dot_inactive_screen25">#0e1e49</color>
+    <color name="dot_inactive_screen26">#0e1e49</color>
+    <color name="dot_inactive_screen27">#0e1e49</color>
+    <color name="dot_inactive_screen28">#0e1e49</color>
+    <color name="dot_inactive_screen29">#0e1e49</color>
+    <color name="dot_inactive_screen30">#0e1e49</color>
+    <color name="dot_inactive_screen31">#0e1e49</color>
+    <color name="dot_inactive_screen32">#0e1e49</color>
+    <color name="dot_inactive_screen33">#0e1e49</color>
+    <color name="dot_inactive_screen34">#0e1e49</color>
     <!-- dots active colors -->
     <color name="dot_active_screen1">#f9c772</color>
     <color name="dot_active_screen2">#74f7c5</color>
@@ -107,6 +125,15 @@
     <color name="dot_active_screen23">#3a67e0</color>
     <color name="dot_active_screen24">#3a67e0</color>
     <color name="dot_active_screen25">#3a67e0</color>
+    <color name="dot_active_screen26">#3a67e0</color>
+    <color name="dot_active_screen27">#3a67e0</color>
+    <color name="dot_active_screen28">#3a67e0</color>
+    <color name="dot_active_screen29">#3a67e0</color>
+    <color name="dot_active_screen30">#3a67e0</color>
+    <color name="dot_active_screen31">#3a67e0</color>
+    <color name="dot_active_screen32">#3a67e0</color>
+    <color name="dot_active_screen33">#3a67e0</color>
+    <color name="dot_active_screen34">#3a67e0</color>
     <array name="array_dot_active">
         <item>@color/dot_active_screen1</item>
         <item>@color/dot_active_screen2</item>
@@ -133,6 +160,15 @@
         <item>@color/dot_active_screen23</item>
         <item>@color/dot_active_screen24</item>
         <item>@color/dot_active_screen25</item>
+        <item>@color/dot_active_screen26</item>
+        <item>@color/dot_active_screen27</item>
+        <item>@color/dot_active_screen28</item>
+        <item>@color/dot_active_screen29</item>
+        <item>@color/dot_active_screen30</item>
+        <item>@color/dot_active_screen31</item>
+        <item>@color/dot_active_screen32</item>
+        <item>@color/dot_active_screen33</item>
+        <item>@color/dot_active_screen34</item>
     </array>
     <array name="array_dot_inactive">
         <item>@color/dot_inactive_screen1</item>
@@ -160,5 +196,14 @@
         <item>@color/dot_inactive_screen23</item>
         <item>@color/dot_inactive_screen24</item>
         <item>@color/dot_inactive_screen25</item>
+        <item>@color/dot_inactive_screen26</item>
+        <item>@color/dot_inactive_screen27</item>
+        <item>@color/dot_inactive_screen28</item>
+        <item>@color/dot_inactive_screen29</item>
+        <item>@color/dot_inactive_screen30</item>
+        <item>@color/dot_inactive_screen31</item>
+        <item>@color/dot_inactive_screen32</item>
+        <item>@color/dot_inactive_screen33</item>
+        <item>@color/dot_inactive_screen34</item>
     </array>
 </resources>

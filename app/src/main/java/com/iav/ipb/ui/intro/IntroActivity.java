@@ -22,6 +22,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.iav.ipb.R;
+import com.iav.ipb.ui.MenuActivity;
 import com.iav.ipb.ui.kuis.KuisActivity;
 
 public class IntroActivity extends AppCompatActivity {
@@ -51,7 +52,8 @@ public class IntroActivity extends AppCompatActivity {
                 R.layout.fragment_first,
                 R.layout.sklider_2,
                 R.layout.sklider_3,
-                R.layout.sklider_4};
+                R.layout.sklider_4,
+        };
 
         // adding bottom dots
         addBottomDots(0);
@@ -67,7 +69,7 @@ public class IntroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getApplicationContext(), KuisActivity.class));
+                startActivity(new Intent(getApplicationContext(), MenuActivity.class));
             }
         });
 
@@ -81,7 +83,7 @@ public class IntroActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    startActivity(new Intent(getApplicationContext(), KuisActivity.class));
+                    startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 }
             }
         });

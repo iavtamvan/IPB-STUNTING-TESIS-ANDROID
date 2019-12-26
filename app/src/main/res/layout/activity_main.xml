@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.MenuActivity">
+    tools:context=".ui.MenuActivity"
+    android:background="@drawable/background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,7 +20,11 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/cv_pengetahuan"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -31,9 +36,9 @@
                     <ImageView
                         android:id="@+id/iv_menu_materi"
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
+                        android:layout_height="180dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/menu_materi" />
+                        android:src="@drawable/pengetahuan" />
 
                 </LinearLayout>
 
@@ -42,16 +47,20 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="8dp"
+                android:id="@+id/cv_skrining"
+                android:layout_marginBottom="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
                 <ImageView
                     android:id="@+id/iv_menu_soal"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="180dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/menu_soal" />
+                    android:src="@drawable/skrining" />
 
 
             </com.google.android.material.card.MaterialCardView>
@@ -59,16 +68,20 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/cv_profil"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
                 <ImageView
                     android:id="@+id/iv_menu_profil"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="180dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/menu_profil" />
+                    android:src="@drawable/profil" />
 
             </com.google.android.material.card.MaterialCardView>
 
