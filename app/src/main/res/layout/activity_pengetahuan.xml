@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context=".ui.PengetahuanActivity">
 
 
@@ -26,13 +27,10 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="ANEMIA/KURANG DARAH"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="@android:color/black"
-                    android:textSize="24dp"/>
+                    android:layout_height="70dp"
+                    android:src="@drawable/gmen1"/>
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
@@ -43,13 +41,10 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="KEKURANGAN ENERGI KRONIK (KEK)"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="@android:color/black"
-                    android:textSize="24dp"/>
+                    android:layout_height="70dp"
+                    android:src="@drawable/gmen2"/>
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
@@ -60,13 +55,10 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="PREEKLAMSIA"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="@android:color/black"
-                    android:textSize="24dp"/>
+                    android:layout_height="70dp"
+                    android:src="@drawable/gmen3"/>
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
@@ -77,13 +69,10 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="DIABETES MELITUS"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="@android:color/black"
-                    android:textSize="24dp"/>
+                    android:layout_height="70dp"
+                    android:src="@drawable/gmen4"/>
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
@@ -94,13 +83,10 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="HIPERTENSI"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="@android:color/black"
-                    android:textSize="24dp"/>
+                    android:layout_height="70dp"
+                    android:src="@drawable/gmen5"/>
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
@@ -111,13 +97,10 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Kurangnya melakukan  pemeriksaan kehamilan/Antenatal care (ANC)"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="@android:color/black"
-                    android:textSize="24dp"/>
+                    android:layout_height="70dp"
+                    android:src="@drawable/gmen6"/>
 
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
@@ -128,13 +111,10 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="SANITASI"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="@android:color/black"
-                    android:textSize="24dp"/>
+                    android:layout_height="70dp"
+                    android:src="@drawable/gmen7"/>
 
             </com.google.android.material.card.MaterialCardView>
 
