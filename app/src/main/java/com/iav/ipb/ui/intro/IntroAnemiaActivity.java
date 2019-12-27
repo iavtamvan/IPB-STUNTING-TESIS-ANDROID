@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import com.iav.ipb.R;
 import com.iav.ipb.ui.MenuActivity;
+import com.iav.ipb.ui.PengetahuanActivity;
 
 public class IntroAnemiaActivity extends AppCompatActivity {
 
@@ -67,8 +68,8 @@ public class IntroAnemiaActivity extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+                startActivity(new Intent(getApplicationContext(), PengetahuanActivity.class));
+                finishAffinity();
             }
         });
 
@@ -82,7 +83,8 @@ public class IntroAnemiaActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+                    startActivity(new Intent(getApplicationContext(), PengetahuanActivity.class));
+                    finishAffinity();
                 }
             }
         });
