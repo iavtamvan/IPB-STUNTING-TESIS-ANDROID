@@ -1,19 +1,18 @@
 package com.iav.ipb.ui.kuis
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.iav.ipb.R
 import com.iav.ipb.adapter.HasilAdapter
-import com.iav.ipb.data.KuisData
 import com.iav.ipb.model.KuisModel
 import kotlinx.android.synthetic.main.activity_hasil.*
 
 class HasilActivity : AppCompatActivity() {
 
-    var listIndexJawabanTidak : ArrayList<KuisModel>? = null
+    var listIndexJawabanTidak: ArrayList<KuisModel>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,16 +22,26 @@ class HasilActivity : AppCompatActivity() {
         checkListIsEmpty()
 
         val skor = intent.getStringExtra("SKOR")
-        hasil_tv_skor.text = skor
+
+        Log.d("SKOR", "${skor.toDouble()}")
+        var status = ""
+        if (skor.toDouble() >= 76.toDouble() && skor.toDouble() <= 100.toDouble()) {
+            status = "AMAN"
+        } else if (skor.toDouble() >= 56.toDouble() && skor.toDouble() <= 75.toDouble()) {
+            status = "WASPADA"
+        } else if (skor.toDouble() <= 55.toDouble()){
+            status = "BERBAHAYA"
+        }
+        hasil_tv_skor.text = status
 
         aturRecyclerView()
     }
 
     private fun checkListIsEmpty() {
-        if (listIndexJawabanTidak?.size == 0){
+        if (listIndexJawabanTidak?.size == 0) {
             hasil_rv_deskripsi.visibility = View.GONE
             hasil_iv_empty.visibility = View.VISIBLE
-        }else{
+        } else {
             hasil_rv_deskripsi.visibility = View.VISIBLE
             hasil_iv_empty.visibility = View.GONE
         }
