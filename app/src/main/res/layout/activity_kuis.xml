@@ -54,6 +54,17 @@
         app:layout_constraintVertical_bias="0.15"
         tools:text="Ini adalah contoh soalnya gengs, segini panjangnya lhoo" />
 
+    <RadioGroup
+        android:id="@+id/kuis_radiogrup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kuis_tv_soal">
+
+    </RadioGroup>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -62,37 +73,19 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <TextView
-        android:id="@+id/kuis_tv_tidak"
+        android:id="@+id/kuis_tv_lanjut"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
+        android:padding="10dp"
         android:background="@drawable/border_tv_jawaban_tidak"
         android:gravity="center"
-        android:text="TIDAK"
+        android:text="LANJUT"
         android:textColor="#000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="2:1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/guideline" />
-
-    <TextView
-        android:id="@+id/kuis_tv_ya"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/border_tv_jawaban_ya"
-        android:gravity="center"
-        android:text="YA"
-        android:textColor="#000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="2:1"
-        app:layout_constraintLeft_toRightOf="@id/guideline"
         app:layout_constraintRight_toRightOf="parent" />
 
 

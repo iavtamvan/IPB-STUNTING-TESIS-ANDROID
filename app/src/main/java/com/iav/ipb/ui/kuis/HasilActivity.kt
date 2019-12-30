@@ -13,17 +13,17 @@ import kotlinx.android.synthetic.main.activity_hasil.*
 
 class HasilActivity : AppCompatActivity() {
 
-    var listIndexJawabanTidak : ArrayList<Int>? = null
+    var listIndexJawabanTidak : ArrayList<KuisModel>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hasil)
 
-        listIndexJawabanTidak = intent.getIntegerArrayListExtra("JAWABANTIDAK")
+        listIndexJawabanTidak = intent.getParcelableArrayListExtra("JAWABANTIDAK")
         checkListIsEmpty()
 
-        val skor = intent.getIntExtra("SKOR", 0)
-        hasil_tv_skor.text = "$skor"
+        val skor = intent.getStringExtra("SKOR")
+        hasil_tv_skor.text = skor
 
         aturRecyclerView()
     }
@@ -40,19 +40,19 @@ class HasilActivity : AppCompatActivity() {
 
     private fun aturRecyclerView() {
         //Mendapatkan soal dan deskripsi dari jawaban tidak
-        val listData : ArrayList<KuisModel> = ArrayList()
-        for (i in 0 until listIndexJawabanTidak?.size!!){
-            val kuisModel = KuisModel(
-                    soal = KuisData.kuisSoal[listIndexJawabanTidak?.get(i)!!],
-                    deskripsi = KuisData.kuisDeskripsi[listIndexJawabanTidak?.get(i)!!],
-                    visibility = false
-            )
-            Log.d("HASILKUIS", kuisModel.toString())
-            listData.add(kuisModel)
-        }
+//        val listData : ArrayList<KuisModel> = ArrayList()
+//        for (i in 0 until listIndexJawabanTidak?.size!!){
+//            val kuisModel = KuisModel(
+//                    soal = KuisData.kuisSoal[listIndexJawabanTidak?.get(i)!!],
+//                    deskripsi = KuisData.kuisDeskripsi[listIndexJawabanTidak?.get(i)!!],
+//                    visibility = false
+//            )
+//            Log.d("HASILKUIS", kuisModel.toString())
+//            listData.add(kuisModel)
+//        }
 
         val lm = LinearLayoutManager(this)
-        val adapter = HasilAdapter(listData)
+        val adapter = HasilAdapter(listIndexJawabanTidak)
         hasil_rv_deskripsi.layoutManager = lm
         hasil_rv_deskripsi.adapter = adapter
 

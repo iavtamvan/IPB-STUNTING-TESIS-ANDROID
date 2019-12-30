@@ -14,12 +14,6 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".ui.BeratBadanActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
         <activity android:name=".ui.intro.IntroSanitasiActivity" />
         <activity android:name=".ui.intro.IntroANCActivity" />
@@ -30,7 +24,13 @@
         <activity android:name=".ui.intro.IntroAnemiaActivity" />
         <activity android:name=".ui.PengetahuanActivity" />
         <activity android:name=".ui.kuis.HasilActivity" />
-        <activity android:name=".ui.kuis.KuisActivity" />
+        <activity android:name=".ui.kuis.KuisActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ui.MateriActivity" />
         <activity android:name=".ui.intro.SplashActivity">
         </activity>
