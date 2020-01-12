@@ -23,9 +23,9 @@ object KuisData {
             mutableListOf("YA", "TIDAK"),
             mutableListOf("YA", "TIDAK", "Kehamilan Pertama"),
             mutableListOf("YA", "TIDAK", "Kehamilan Pertama"),
-            mutableListOf("Kurang dari 140/90 mmHg", "Lebih dari 140/90 mmHg"),
+            mutableListOf("Kurang dari 140/90 mmHg", "140/90 mmHg atau lebih"),
             mutableListOf("Lebih dari 23,5 cm", "Kurang dari 23,5 cm"),
-            mutableListOf("Normal 11,6 – 14,8 g/Dl ", "Kurang dari 11,6 g/dL", "Belum periksa hemoglobin"),
+            mutableListOf("Normal 11 – 14,8 g/Dl ", "Kurang dari 11 g/dL", "Belum periksa hemoglobin"),
             mutableListOf("YA", "TIDAK", "Saat ini mengalami diabetes mellitus"),
             mutableListOf("YA", "TIDAK"),
 //            mutableListOf("YA", "TIDAK"),
@@ -45,14 +45,15 @@ object KuisData {
                     "Saran :\n" +
                     "    1. Ibu harus melakukan pemeriksaan kehamilan ke dokter/bidan atau tenaga kesehatan lainnya yang berkompeten yang bertujuan untuk :\n" +
                     "    • Mendeteksi dan menatalaksana komplikasi-komplikasi yang dapat mengancam jiwa ibu hamil dan janinnya.\n" +
-                    "    • Memberikan edukasi pendidikan kepada ibu hamil seputar masalah gizi, persiapan persalinan dan kemungkinan terjadinya komplikasi.\n" +
+                    "    • Mendapatkan pendidikan kesehatan seputar masalah gizi, persiapan persalinan dan kemungkinan terjadinya komplikasi.\n" +
                     "    • Mempersiapkan kelahiran.\n\n" +
                     "Pemeriksaan kehamilan dalam Antenatal Care (ANC) harus memenuhi frekuensi  yaitu minimal 4 kali selama masa kehamilan.\n" +
-                    "    * Trimester I (usia kehamilan 0-12 minggu) -> minimal 1 kali. \n" +
-                    "    * Trimester II (usia kehamilan 12-24 minggu) -> minimal 1 kali. \n" +
-                    "    * Trimester III (usia kehamilan 24 minggu sampai persalinan) -> minimal 2 kali."),
+                    "    * Trimester I (usia kehamilan 0-12 minggu) minimal 1 kali. \n" +
+                    "    * Trimester II (usia kehamilan 12-24 minggu) minimal 1 kali. \n" +
+                    "    * Trimester III (usia kehamilan 24 minggu sampai persalinan) minimal 2 kali."),
             mutableListOf(null,
-                    "Karena usia kurang dari 20 tahun atau lebih dari 35 tahun termasuk resiko tinggi pada kehamilan.\\n\" +\n" +
+                    "Karena usia kurang dari 20 tahun atau lebih dari \n" +
+                            "35 tahun termasuk resiko tinggi pada kehamilan.\\n\" +\n" +
                     "Saran :\n"+
                     "    1. Rajin menjaga kebugaran (olahraga)\\n\" +\n" +
                     "    2. Rutin melakukan pemeriksaan kehamilan dengan dokter/ bidan atau tenaga kesehatan lainnya yang berkompeten.\\n\" +\n" +
@@ -61,7 +62,7 @@ object KuisData {
                     "Karena melahirkan anak terlalu banyak atau lebih dari 4 orang termasuk resiko tinggi pada kehamilan.\n\n" +
                     "Saran\n" +
                     "    1. Konsultasi dengan bidan atau dokter.",
-                    "Karena melahirkan anak terlalu banyak atau lebih dari 4 orang termasuk resiko tinggi pada kehamilan.\n\n" +
+                    "       Karena melahirkan anak terlalu banyak atau lebih dari 4 orang termasuk resiko tinggi pada kehamilan.\n\n" +
                     "Saran\n" +
                     "    1. Konsultasi dengan bidan atau dokter."),
             mutableListOf(null,
@@ -77,7 +78,7 @@ object KuisData {
                     "    4. Istirahat yang cukup\n\n" +
                     "Apabila terjadi gejala tersebut maka ibu perlu untuk segera memeriksakan diri ke dokter."),
             mutableListOf(null,
-                    "Karena ukuran ukuran lingkar lengan (LILA) ibu saat ini kurang dari 23,5 cm. Artinya ibu mengalami kekurangan energi kronik (KEK) Perbaikan gizi\n\n" +
+                    "Karena ukuran ukuran lingkar lengan (LILA) ibu saat ini kurang dari 23,5 cm. Artinya ibu mengalami kekurangan energi kronik (KEK).\n\n" +
                     "Saran:\n" +
                     "    1. Rutin meminum tablet tambah darah (Fe) tiap hari selama masa kehamilan\n" +
                     "    2. Meningkatkan konsumsi makanan bergizi diantaranya:\n" +
@@ -111,7 +112,7 @@ object KuisData {
                     "    2. Sendimentasi (pengendapan)\n" +
                     "    3. Bisa dengan menggunakan mesin penjernih air\n" +
                     "    4. Tidak membuang sampah ke sungai \n" +
-                    "    5. Membung sampah pada tempatnya", null),
+                    "    5. Membuang sampah pada tempatnya", null),
             mutableListOf(
                     "Saluran air limbah/tangki septik/sampah menimbulkan aroma tidak sedap akan menurunkan derajat kesehatan. Maka bisa di hindari dengan cara :\n\n" +
                     "    1. Pastikan konstrusi saluran pembungan air limbah (saluran pembuangan air cuci piring, air cucian, dan lan-lan) tidak rusak (baik) dan kedap air.\n" +
