@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.iav.ipb.R
 import com.iav.ipb.adapter.HasilAdapter
 import com.iav.ipb.model.KuisModel
@@ -21,16 +22,25 @@ class HasilActivity : AppCompatActivity() {
         listIndexJawabanTidak = intent.getParcelableArrayListExtra("JAWABANTIDAK")
         checkListIsEmpty()
 
-        val skor = intent.getStringExtra("SKOR")
+        val skor = intent.getDoubleExtra("SKOR", (-1).toDouble())
 
-        Log.d("SKOR", "${skor.toDouble()}")
+        Log.d("SKOR", "$skor")
         var status = ""
-        if (skor.toDouble() >= 76.toDouble() && skor.toDouble() <= 100.toDouble()) {
+        if (skor >= 76.toDouble() && skor <= 100.toDouble()) {
             status = "AMAN"
-        } else if (skor.toDouble() >= 56.toDouble() && skor.toDouble() <= 75.toDouble()) {
+            Glide.with(this)
+                    .load(R.drawable.aman)
+                    .into(iv_gambar)
+        } else if (skor >= 56.toDouble() && skor <= 75.toDouble()) {
             status = "WASPADA"
-        } else if (skor.toDouble() <= 55.toDouble()){
+            Glide.with(this)
+                    .load(R.drawable.waspada)
+                    .into(iv_gambar)
+        } else if (skor <= 55.toDouble()) {
             status = "BERBAHAYA"
+            Glide.with(this)
+                    .load(R.drawable.berbahaya_2)
+                    .into(iv_gambar)
         }
         hasil_tv_skor.text = status
 

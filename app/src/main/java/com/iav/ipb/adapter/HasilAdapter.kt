@@ -1,11 +1,13 @@
 package com.iav.ipb.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.iav.ipb.R
 import com.iav.ipb.model.KuisModel
+import com.iav.ipb.ui.kuis.DeskripsiActivity
 import kotlinx.android.synthetic.main.view_hasil.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
@@ -22,14 +24,17 @@ class HasilAdapter(var list: ArrayList<KuisModel>?) : RecyclerView.Adapter<Hasil
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(position: Int) {
             itemView.vh_tv_soal.text = list?.get(position)?.soal
-            itemView.vh_tv_deskripsi.text = list?.get(position)?.deskripsi
+            itemView.vh_tv_deskripsi.text = list?.get(position)?.judul
 
             aturVisibility(position)
 
             itemView.vh_tv_soal.onClick {
-                list?.get(position)?.visibility = !list?.get(position)?.visibility!!
-                notifyDataSetChanged()
-                aturVisibility(position)
+//                list?.get(position)?.visibility = !list?.get(position)?.visibility!!
+//                notifyDataSetChanged()
+//                aturVisibility(position)
+                val intent = Intent(itemView.context, DeskripsiActivity::class.java)
+                intent.putExtra("DESKRIPSI", list?.get(position))
+                itemView.context.startActivity(intent)
             }
         }
 

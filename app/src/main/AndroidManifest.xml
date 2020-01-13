@@ -13,8 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.BeratBadanActivity">
-        </activity>
+        <activity android:name=".ui.kuis.DeskripsiActivity"></activity>
+        <activity android:name=".ui.BeratBadanActivity"></activity>
         <activity android:name=".ui.intro.IntroSanitasiActivity" />
         <activity android:name=".ui.intro.IntroANCActivity" />
         <activity android:name=".ui.intro.IntroHipertensiActivity" />
@@ -32,9 +32,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MateriActivity" />
-        <activity android:name=".ui.intro.SplashActivity">
-        </activity>
-        <activity android:name=".ui.intro.IntroActivity"></activity>
+        <activity android:name=".ui.intro.SplashActivity"></activity>
+        <activity android:name=".ui.intro.IntroActivity" />
         <activity android:name=".ui.MenuActivity" />
     </application>
 

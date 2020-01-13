@@ -17,7 +17,8 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
     var listKuis: ArrayList<String> = ArrayList()
 
     var listPilihanJawaban: ArrayList<ArrayList<String>> = ArrayList()
-    var listDeskripsiJawaban: ArrayList<ArrayList<String>> = ArrayList()
+    var listJudulDeskripsiJawaban: ArrayList<ArrayList<String>> = ArrayList()
+    var listDeskripsiJawaban: ArrayList<ArrayList<ArrayList<String>>> = ArrayList()
 
     var listJawabanDenganDeskripsi: ArrayList<KuisModel> = ArrayList()
 
@@ -31,6 +32,7 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
 
         listKuis = KuisData.kuisSoal
         listPilihanJawaban = KuisData.pilihanJawabanSoal
+        listJudulDeskripsiJawaban = KuisData.titleDeskripsiJawabanSoal
         listDeskripsiJawaban = KuisData.deskripsiJawabanSoal
         generateKuis()
 
@@ -41,8 +43,8 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
     private fun generateKuis() {
         if (indexKuis == listKuis.size) {
             finish()
-            val presentase: Float = skor.toFloat() / 10 / listKuis.size * 100
-            startActivity(intentFor<HasilActivity>("JAWABANTIDAK" to listJawabanDenganDeskripsi, "SKOR" to String.format("%.2f", presentase)))
+            val presentase: Double = skor.toDouble() / 10.toDouble() / (listKuis.size).toDouble() * 100.toDouble()
+            startActivity(intentFor<HasilActivity>("JAWABANTIDAK" to listJawabanDenganDeskripsi, "SKOR" to presentase))
         } else {
             val kuis = listKuis[indexKuis]
             kuis_tv_nomer_soal.text = "Nomer Soal ${(indexKuis + 1)}"
@@ -78,6 +80,7 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
                     skor += 0
                     kuis_tv_skor_jawaban.text = "Skor : $skor"
                     val kuisModel = KuisModel(soal = kuis_tv_soal.text.toString(),
+                            judul = listJudulDeskripsiJawaban[indexKuis - 1][indexOfRadioButtonSelected],
                             deskripsi = listDeskripsiJawaban[indexKuis - 1][indexOfRadioButtonSelected])
                     listJawabanDenganDeskripsi.add(kuisModel)
                 }
