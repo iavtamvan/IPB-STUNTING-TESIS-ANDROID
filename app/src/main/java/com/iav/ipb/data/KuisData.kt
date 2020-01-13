@@ -20,9 +20,9 @@ object KuisData {
             mutableListOf("< 20 tahun", "> 20 tahun dan < 35 tahun", "> 35 tahun"),
             mutableListOf("YA", "TIDAK", "Kehamilan Pertama"),
             mutableListOf("YA", "TIDAK", "Kehamilan Pertama"),
-            mutableListOf("Kurang dari 140/90 mmHg", "Lebih dari 140/90 mmHg"),
+            mutableListOf("Kurang dari 140/90 mmHg", "140/90 mmHg atau lebih"),
             mutableListOf("Lebih dari 23,5 cm", "Kurang dari 23,5 cm"),
-            mutableListOf("Normal 11,6 – 14,8 g/Dl ", "Kurang dari 11,6 g/dL", "Belum periksa hemoglobin"),
+            mutableListOf("Normal 11 – 14,8 g/Dl ", "Kurang dari 11 g/dL", "Belum periksa hemoglobin"),
             mutableListOf("YA", "TIDAK", "Saat ini mengalami diabetes mellitus"),
             mutableListOf("YA", "TIDAK"),
             mutableListOf("YA", "TIDAK")
@@ -82,6 +82,7 @@ object KuisData {
                     null
             ),
             mutableListOf(null,
+<<<<<<< HEAD
                     mutableListOf(
                             "*Tirah baring",
                             "*Memeriksakan kehamilan secara rutin",
@@ -96,6 +97,51 @@ object KuisData {
                                     "   - Bahan makanan hewani : daging, ikan, ayam, hati dan telur\n" +
                                     "   - Bahan makanan nabati: sayuran berwarna hijau tua, kacang-kacangan, tempe, dan buah-buahan."
                     )),
+=======
+                    "Karena ibu belum pernah melakukan pemerksaan ditempat pelayanan kesehatan\n\n" +
+                    "Saran :\n" +
+                    "    1. Ibu harus melakukan pemeriksaan kehamilan ke dokter/bidan atau tenaga kesehatan lainnya yang berkompeten yang bertujuan untuk :\n" +
+                    "    • Mendeteksi dan menatalaksana komplikasi-komplikasi yang dapat mengancam jiwa ibu hamil dan janinnya.\n" +
+                    "    • Mendapatkan pendidikan kesehatan seputar masalah gizi, persiapan persalinan dan kemungkinan terjadinya komplikasi.\n" +
+                    "    • Mempersiapkan kelahiran.\n\n" +
+                    "Pemeriksaan kehamilan dalam Antenatal Care (ANC) harus memenuhi frekuensi  yaitu minimal 4 kali selama masa kehamilan.\n" +
+                    "    * Trimester I (usia kehamilan 0-12 minggu) minimal 1 kali. \n" +
+                    "    * Trimester II (usia kehamilan 12-24 minggu) minimal 1 kali. \n" +
+                    "    * Trimester III (usia kehamilan 24 minggu sampai persalinan) minimal 2 kali."),
+            mutableListOf(null,
+                    "Karena usia kurang dari 20 tahun atau lebih dari \n" +
+                            "35 tahun termasuk resiko tinggi pada kehamilan.\\n\" +\n" +
+                    "Saran :\n"+
+                    "    1. Rajin menjaga kebugaran (olahraga)\\n\" +\n" +
+                    "    2. Rutin melakukan pemeriksaan kehamilan dengan dokter/ bidan atau tenaga kesehatan lainnya yang berkompeten.\\n\" +\n" +
+                    "    3. Rutin berkonsultasi kepada dokter/ bidan atau tenaga kesehatan lainnya yang berkompeten mengenai asupan gizi yang perlu bagi kesehatan kehamilan.\""),
+            mutableListOf(null,
+                    "Karena melahirkan anak terlalu banyak atau lebih dari 4 orang termasuk resiko tinggi pada kehamilan.\n\n" +
+                    "Saran\n" +
+                    "    1. Konsultasi dengan bidan atau dokter.",
+                    "       Karena melahirkan anak terlalu banyak atau lebih dari 4 orang termasuk resiko tinggi pada kehamilan.\n\n" +
+                    "Saran\n" +
+                    "    1. Konsultasi dengan bidan atau dokter."),
+            mutableListOf(null,
+                    "Karena jarak antara kehamilan sekarang dan sebelumnya kurang dari 2 tahun (24 bulan) termasuk resiko tinggi kehamilan.\n\n" +
+                    "Saran: \n" +
+                    "    1. Rutin melakukan pemeriksaan kehamilan dengan dokter/ bidan atau tenaga kesehatan lainnya yang berkompeten untuk mendeteksi risiko kehamilan serta mengatasinya.", "Kehamilan Pertama"),
+            mutableListOf(null,
+                    "Karena bisa mengalami hipertensi atau preeklamsa jika usia kehamilan sudah mencapai diatas 20 minggu\n \n" +
+                    "Saran:\n" +
+                    "    1. Tirah baring\n" +
+                    "    2. Memeriksakan kehamilan secara rutin\n" +
+                    "    3. melakukan diet\n" +
+                    "    4. Istirahat yang cukup\n\n" +
+                    "Apabila terjadi gejala tersebut maka ibu perlu untuk segera memeriksakan diri ke dokter."),
+            mutableListOf(null,
+                    "Karena ukuran ukuran lingkar lengan (LILA) ibu saat ini kurang dari 23,5 cm. Artinya ibu mengalami kekurangan energi kronik (KEK).\n\n" +
+                    "Saran:\n" +
+                    "    1. Rutin meminum tablet tambah darah (Fe) tiap hari selama masa kehamilan\n" +
+                    "    2. Meningkatkan konsumsi makanan bergizi diantaranya:\n" +
+                    "       • Bahan makanan hewani : daging, ikan, ayam, hati dan telur\n" +
+                    "       • Bahan makanan nabati: sayuran berwarna hijau tua, kacang-kacangan, tempe, dan buah-buahan. "),
+>>>>>>> master
             mutableListOf(null,
                     mutableListOf(
                             "*Rutin meminum tablet tambah darah (Fe) selama masa kehamilan",
@@ -114,6 +160,7 @@ object KuisData {
                             "*Berolahraga secara teratur, seperti senam hamil, renang, dan jalan kaki.",
                             "*Rutin melakukan pemeriksaan kehamilan ke tempat pelayanan kesehatan")),
             mutableListOf(
+<<<<<<< HEAD
                     mutableListOf(
                             "* Penyaringan (filtrasi).",
                             "* Sendimentasi (pengendapan).",
@@ -122,6 +169,14 @@ object KuisData {
                             "* Membuang sampah pada tempatnya."
                     ),
                     null),
+=======
+                    "Air yang  digunakan sehari-hari berbau/berwarna/ keruh bisa mepengaruhi kesehatan, maka untuk mendapatkan air yang layak untuk dipakai, bisa dilakukan dengan cara :\n\n" +
+                    "    1. Penyaringan (filtrasi)\n" +
+                    "    2. Sendimentasi (pengendapan)\n" +
+                    "    3. Bisa dengan menggunakan mesin penjernih air\n" +
+                    "    4. Tidak membuang sampah ke sungai \n" +
+                    "    5. Membuang sampah pada tempatnya", null),
+>>>>>>> master
             mutableListOf(
                     mutableListOf(
                             "*Pastikan konstrusi saluran pembungan air limbah (saluran pembuangan air cuci piring, air cucian, dan lan-lan) tidak rusak (baik) dan kedap air.",

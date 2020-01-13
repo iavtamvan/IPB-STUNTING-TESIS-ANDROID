@@ -29,6 +29,7 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kuis)
+        supportActionBar?.hide()
 
         listKuis = KuisData.kuisSoal
         listPilihanJawaban = KuisData.pilihanJawabanSoal

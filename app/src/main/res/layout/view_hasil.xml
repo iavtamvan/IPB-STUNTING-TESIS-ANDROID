@@ -3,25 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="8dp"
-    android:background="@drawable/border_tv_soal"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/vh_tv_soal"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/border_tv_soal"
-        android:drawableRight="@drawable/ic_right_chevron"
-        android:padding="10dp"
-        tools:text="Soalnya kayak gini nih" />
+        android:layout_margin="4dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp">
 
-    <TextView
-        android:id="@+id/vh_tv_deskripsi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:visibility="gone"
-        tools:text="Deskripsinya kayak gini nih dengerin yaa hahahahahahaha" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_tv_soal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/vh_tv_soal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:drawableRight="@drawable/ic_right_chevron"
+                android:padding="10dp"
+                tools:text="Soalnya kayak gini nih" />
+
+            <TextView
+                android:id="@+id/vh_tv_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="gone"
+                tools:text="Deskripsinya kayak gini nih dengerin yaa hahahahahahaha" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
