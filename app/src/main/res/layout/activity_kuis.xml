@@ -70,15 +70,32 @@
 
     <EditText
         android:id="@+id/kuis_edt"
-        android:visibility="gone"
         android:layout_width="0dp"
         android:inputType="number"
+        android:background="@drawable/border_kotak"
+        android:padding="10dp"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:hint="Masukkan umur"
+        android:textColor="@color/White"
         app:layout_constraintTop_toBottomOf="@id/kuis_tv_soal"
         android:layout_marginTop="18dp"/>
+
+    <TextView
+        android:id="@+id/kuis_tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        tools:text="Terlalu muda untuk hamil"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/White"
+        android:background="@drawable/border_kotak"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kuis_edt"
+        android:layout_marginTop="10dp"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"

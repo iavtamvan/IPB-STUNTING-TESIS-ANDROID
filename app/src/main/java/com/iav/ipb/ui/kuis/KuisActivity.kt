@@ -2,6 +2,8 @@ package com.iav.ipb.ui.kuis
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.RadioButton
@@ -40,6 +42,34 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
         listDeskripsiJawaban = KuisData.deskripsiJawabanSoal
         generateKuis()
 
+        kuis_edt.addTextChangedListener(object: TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                if (!p0.isNullOrBlank() || !p0.isNullOrEmpty()){
+                    val age = p0.toString().toInt()
+                    when {
+                        age < 20 -> {
+                            kuis_tv_status.text = "Terlalu muda untuk hamil"
+                        }
+                        age > 35 -> {
+                            kuis_tv_status.text = "Terlalu tua untuk hamil"
+                        }
+                        age in 20..35 -> {
+                            kuis_tv_status.text = "Usia ideal untuk hamil"
+                        }
+                    }
+                }
+            }
+
+        })
+
         kuis_tv_lanjut.setOnClickListener(this)
     }
 
@@ -57,9 +87,11 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
             if (indexKuis==1){
                 kuis_edt.visibility = View.VISIBLE
                 kuis_radiogrup.visibility = View.GONE
+                kuis_tv_status.visibility = View.VISIBLE
             }else{
                 kuis_edt.visibility = View.GONE
                 kuis_radiogrup.visibility = View.VISIBLE
+                kuis_tv_status.visibility = View.GONE
             }
 
             for (i in 0 until listPilihanJawaban[indexKuis].size) {
