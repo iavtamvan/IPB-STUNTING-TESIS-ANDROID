@@ -68,6 +68,18 @@
 
     </RadioGroup>
 
+    <EditText
+        android:id="@+id/kuis_edt"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Masukkan umur"
+        app:layout_constraintTop_toBottomOf="@id/kuis_tv_soal"
+        android:layout_marginTop="18dp"/>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"

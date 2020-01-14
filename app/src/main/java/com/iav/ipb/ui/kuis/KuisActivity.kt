@@ -2,6 +2,7 @@ package com.iav.ipb.ui.kuis
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
@@ -53,8 +54,17 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
             kuis_tv_nomer_soal.text = "Nomer Soal ${(indexKuis + 1)}"
             kuis_tv_soal.text = kuis
 
+            if (indexKuis==1){
+                kuis_edt.visibility = View.VISIBLE
+                kuis_radiogrup.visibility = View.GONE
+            }else{
+                kuis_edt.visibility = View.GONE
+                kuis_radiogrup.visibility = View.VISIBLE
+            }
+
             for (i in 0 until listPilihanJawaban[indexKuis].size) {
                 val radioButton = RadioButton(this)
+                radioButton.id = i
                 radioButton.setTextColor(resources.getColor(R.color.White))
                 radioButton.text = listPilihanJawaban[indexKuis][i]
                 kuis_radiogrup.addView(radioButton)
@@ -67,33 +77,69 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View?) {
         when (view) {
             kuis_tv_lanjut -> {
-                if (kuis_radiogrup.checkedRadioButtonId == -1) {
-                    toast("Pilih jawaban dahulu")
-                    return
+                if (indexKuis-1 == 1){
+                    checkEditText()
+                }else{
+                    checkedAnswerDefault()
                 }
 
-                //Mendapatkan jawaban kuis
-                val radioButtonId = kuis_radiogrup.checkedRadioButtonId
-                val indexOfRadioButtonSelected = kuis_radiogrup.indexOfChild(kuis_radiogrup.findViewById(radioButtonId))
-
-                //Check jawaban kuis, jika deskripsi jawabannya null maka sama dengan menjawab YA
-                if (listDeskripsiJawaban[indexKuis - 1][indexOfRadioButtonSelected] == null) {
-                    skor += 10
-                    kuis_tv_skor_jawaban.text = "Skor : $skor"
-                } else {
-                    skor += 0
-                    kuis_tv_skor_jawaban.text = "Skor : $skor"
-                    val kuisModel = KuisModel(soal = kuis_tv_soal.text.toString(),
-                            judul = listJudulDeskripsiJawaban[indexKuis - 1][indexOfRadioButtonSelected],
-                            deskripsi = listDeskripsiJawaban[indexKuis - 1][indexOfRadioButtonSelected])
-                    listJawabanDenganDeskripsi.add(kuisModel)
-                }
-
-                //Generate Soal Selanjutnya
-                kuis_radiogrup.clearCheck()
-                kuis_radiogrup.removeAllViews()
-                generateKuis()
             }
         }
+    }
+
+    private fun checkEditText() {
+        if (kuis_edt.text.isNullOrEmpty() || kuis_edt.text.isNullOrBlank()){
+            kuis_edt.error = "Masukkan umur ibu terlebih dahulu"
+            kuis_edt.requestFocus()
+        }else{
+            val age = kuis_edt.text.toString().toInt()
+            when {
+                age < 20 -> {
+                    val rb = kuis_radiogrup.getChildAt(0) as RadioButton
+                    rb.isChecked = true
+                    checkedAnswerDefault()
+                }
+                age > 35 -> {
+                    val rb = kuis_radiogrup.getChildAt(2) as RadioButton
+                    rb.isChecked = true
+                    checkedAnswerDefault()
+                }
+                age in 20..35 -> {
+                    val rb = kuis_radiogrup.getChildAt(1) as RadioButton
+                    rb.isChecked = true
+                    checkedAnswerDefault()
+                }
+            }
+        }
+    }
+
+    private fun checkedAnswerDefault(){
+        if (kuis_radiogrup.checkedRadioButtonId == -1) {
+            toast("Pilih jawaban dahulu")
+            return
+        }
+
+        //Mendapatkan jawaban kuis
+        val radioButtonId = kuis_radiogrup.checkedRadioButtonId
+        val indexOfRadioButtonSelected = kuis_radiogrup.indexOfChild(kuis_radiogrup.findViewById(radioButtonId))
+
+        //Check jawaban kuis, jika deskripsi jawabannya null maka sama dengan menjawab YA
+        if (listDeskripsiJawaban[indexKuis - 1][indexOfRadioButtonSelected] == null) {
+            skor += 10
+            kuis_tv_skor_jawaban.text = "Skor : $skor"
+        } else {
+            skor += 0
+            kuis_tv_skor_jawaban.text = "Skor : $skor"
+            val kuisModel = KuisModel(soal = kuis_tv_soal.text.toString(),
+                    judul = listJudulDeskripsiJawaban[indexKuis - 1][indexOfRadioButtonSelected],
+                    deskripsi = listDeskripsiJawaban[indexKuis - 1][indexOfRadioButtonSelected])
+            Log.d("KUISMODELXXX", "$kuisModel")
+            listJawabanDenganDeskripsi.add(kuisModel)
+        }
+
+        //Generate Soal Selanjutnya
+        kuis_radiogrup.clearCheck()
+        kuis_radiogrup.removeAllViews()
+        generateKuis()
     }
 }

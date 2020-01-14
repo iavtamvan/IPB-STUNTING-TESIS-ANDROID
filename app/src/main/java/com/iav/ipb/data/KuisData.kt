@@ -4,7 +4,7 @@ object KuisData {
 
     var kuisSoal: ArrayList<String> = mutableListOf<String>(
             "Apakah ibu pernah melakukan pemeriksaan kehamilan di tempat pelayanan kesehatan ?",
-            "Apakah umur ibu kurang dari 20 tahun atau lebih dari 35 tahun ?",
+            "Berapakah umur ibu saat ini ?",
             "Apakah jumlah anak lebih dari 4 orang?",
             "Apakah jarak kelahiran anak kurang dari 2 tahun?",
             "Berapa tekanan darah ibu saat ini ?",
@@ -31,7 +31,7 @@ object KuisData {
 
     var titleDeskripsiJawabanSoal = mutableListOf(
             mutableListOf(null, "Karena ibu belum pernah melakukan pemerksaan ditempat pelayanan kesehatan"),
-            mutableListOf("Karena usia kurang dari 20 tahun atau lebih dari 35 tahun termasuk resiko tinggi pada kehamilan.", null, "Karena ibu belum pernah melakukan pemerksaan ditempat pelayanan kesehatan"),
+            mutableListOf("Karena usia kurang dari 20 tahun atau lebih dari 35 tahun termasuk resiko tinggi pada kehamilan.", null, "Karena usia kurang dari 20 tahun atau lebih dari 35 tahun termasuk resiko tinggi pada kehamilan."),
             mutableListOf("Karena melahirkan anak terlalu banyak atau lebih dari 4 orang termasuk resiko tinggi pada kehamilan.", null, null),
             mutableListOf("Karena jarak antara kehamilan sekarang dan sebelumnya kurang dari 2 tahun (24 bulan) termasuk resiko tinggi kehamilan.", null, null),
             mutableListOf(null, "Karena bisa mengalami hipertensi atau preeklamsa jika usia kehamilan sudah mencapai diatas 20 minggu"),
