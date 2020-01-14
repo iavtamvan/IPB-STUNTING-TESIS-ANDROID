@@ -39,7 +39,7 @@ class HasilActivity : AppCompatActivity() {
         } else if (skor <= 55.toDouble()) {
             status = "BERBAHAYA"
             Glide.with(this)
-                    .load(R.drawable.berbahaya_2)
+                    .load(R.drawable.berbahaya_1)
                     .into(iv_gambar)
         }
         hasil_tv_skor.text = status

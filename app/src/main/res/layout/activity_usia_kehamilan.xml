@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    tools:context=".ui.TinggiBadanActivity">
+    tools:context=".ui.UsiaKehamilanActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textSize="30dp"
-                    android:text="ini status BB"
+                    android:text="ini status"
                     android:id="@+id/tv_status"
                     android:layout_margin="20dp"
                     android:textColor="@android:color/white"
@@ -41,8 +41,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
-                android:hint="Berat badan ibu saat ini"
-                android:id="@+id/edt_berat_badan_saatini"
+                android:hint="Berapa usia kehamilan ibu saat ini?"
+                android:id="@+id/edt_usia_hamil"
                 android:textColorHint="@android:color/white"
                 android:inputType="number"/>
         </LinearLayout>
@@ -55,7 +55,7 @@
         android:textColor="@android:color/white"
         android:background="@color/colorPrimary"
         android:textSize="20dp"
-        android:id="@+id/btn_lanjut_tinggi_badan"/>
+        android:id="@+id/btn_lanjut"/>
 
 
 

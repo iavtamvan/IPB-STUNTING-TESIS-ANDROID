@@ -38,15 +38,14 @@ public class MenuActivity extends AppCompatActivity {
         cvSkrining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), BeratBadanActivity.class));
+                startActivity(new Intent(getApplicationContext(), TinggiBadanActivity.class));
             }
         });
 
         cvProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(getApplicationContext(), ));
-                Toast.makeText(MenuActivity.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), ProfilActivity.class));
             }
         });
     }

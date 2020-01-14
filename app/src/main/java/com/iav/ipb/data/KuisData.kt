@@ -93,15 +93,15 @@ object KuisData {
                     mutableListOf(
                             "*Rutin meminum tablet tambah darah (Fe) tiap hari selama masa kehamilan",
                             "*Meningkatkan konsumsi makanan bergizi diantaranya:\n" +
-                                    "   - Bahan makanan hewani : daging, ikan, ayam, hati dan telur\n" +
-                                    "   - Bahan makanan nabati: sayuran berwarna hijau tua, kacang-kacangan, tempe, dan buah-buahan."
+                                    "- Bahan makanan hewani : daging, ikan, ayam, hati dan telur\n" +
+                                    "- Bahan makanan nabati: sayuran berwarna hijau tua, kacang-kacangan, tempe, dan buah-buahan."
                     )),
             mutableListOf(null,
                     mutableListOf(
                             "*Rutin meminum tablet tambah darah (Fe) selama masa kehamilan",
                             "*Meningkatkan konsumsi makanan bergizi diantaranya:\n" +
-                                    "   - Bahan makanan hewani : daging, ikan, ayam, hati dan telur\\n\" +\n" +
-                                    "   - Bahan makanan nabati: sayuran berwarna hijau tua, kacang-kacangan, tempe, dan buah-buahan. \""),
+                                    "- Bahan makanan hewani : daging, ikan, ayam, hati dan telur\n"+
+                                    "- Bahan makanan nabati: sayuran berwarna hijau tua, kacang-kacangan, tempe, dan buah-buahan. \""),
                     mutableListOf("Segera memeriksakan kadar hemoglobin ke tempat pelayanan kesehatan")),
             mutableListOf(
                     mutableListOf(

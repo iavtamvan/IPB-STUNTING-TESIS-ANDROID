@@ -41,8 +41,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
-                android:hint="Berat badan ibu saat ini"
-                android:id="@+id/edt_berat_badan_saatini"
+                android:hint="Berat badan"
+                android:id="@+id/edt_berat_badan"
+                android:textColorHint="@android:color/white"
+                android:inputType="number"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:hint="Tinggi badan"
+                android:id="@+id/edt_tinggi_badan"
                 android:textColorHint="@android:color/white"
                 android:inputType="number"/>
         </LinearLayout>

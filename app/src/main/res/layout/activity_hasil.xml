@@ -12,6 +12,7 @@
         android:id="@+id/hasil_tv_judul_jumlah_skor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:text="STATUS"
         android:textColor="@android:color/black"
         android:textStyle="bold"

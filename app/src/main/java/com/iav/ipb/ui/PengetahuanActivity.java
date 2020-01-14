@@ -32,17 +32,17 @@ public class PengetahuanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pengetahuan);
         initView();
 
-        cvklikANC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), IntroANCActivity.class));
-            }
-        });
 
         cvklikAnemia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), IntroAnemiaActivity.class));
+            }
+        });
+        cvklikANC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), IntroANCActivity.class));
             }
         });
 
@@ -81,6 +81,13 @@ public class PengetahuanActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
+        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
     }
 
     private void initView() {

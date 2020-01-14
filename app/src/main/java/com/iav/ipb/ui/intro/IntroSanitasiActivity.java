@@ -82,7 +82,7 @@ public class IntroSanitasiActivity extends AppCompatActivity {
                     viewPager.setCurrentItem(current);
                 } else {
                     finishAffinity();
-                    startActivity(new Intent(getApplicationContext(), PengetahuanActivity.class));
+                    startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                 }
             }
         });
