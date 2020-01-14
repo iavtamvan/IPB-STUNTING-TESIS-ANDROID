@@ -7,9 +7,9 @@ object KuisData {
             "Apakah umur ibu kurang dari 20 tahun atau lebih dari 35 tahun ?",
             "Apakah jumlah anak lebih dari 4 orang?",
             "Apakah jarak kelahiran anak kurang dari 2 tahun?",
-            "Berapa tekanan darah ibu saat ini ?",
-            "Berapa ukuran lingkar lengan (LILA) ibu saat ini ?",
-            "Berapa kadar hemoglobin (Hb) ibu saat ini ?",
+            "Berapa tekanan darah ibu saat ini? (Bisa dilihat di buku ping Kesehatan ibu dan anak)",
+            "Berapa ukuran lingkar lengan (LILA) ibu saat ini? (Bisa dilihat di buku ping Kesehatan ibu dan anak)",
+            "Berapa kadar hemoglobin (Hb) ibu saat ini? (Bisa dilihat di buku ping Kesehatan ibu dan anak)",
             "Apakah ibu mempunyai riwayat diabetes mellitus pada keluarga atau pada diri sendiri ?",
             "Apakah air yang ibu gunakan sehari-hari berbau/ berwarna/keruh ?",
             "Apakah saluran air limbah/tangki septik/sampah menimbulkan aroma tidak sedap ?"
