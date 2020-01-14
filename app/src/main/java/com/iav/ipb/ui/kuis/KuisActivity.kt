@@ -10,8 +10,10 @@ import com.iav.ipb.data.KuisData
 import com.iav.ipb.model.KuisModel
 import kotlinx.android.synthetic.main.activity_kuis.*
 import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.textColor
 import org.jetbrains.anko.toast
 
+@Suppress("DEPRECATION")
 class KuisActivity : AppCompatActivity(), View.OnClickListener {
 
     var listKuis: ArrayList<String> = ArrayList()
@@ -40,7 +42,7 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
         kuis_tv_lanjut.setOnClickListener(this)
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "ResourceAsColor")
     private fun generateKuis() {
         if (indexKuis == listKuis.size) {
             finish()
@@ -53,6 +55,7 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
 
             for (i in 0 until listPilihanJawaban[indexKuis].size) {
                 val radioButton = RadioButton(this)
+                radioButton.setTextColor(resources.getColor(R.color.White))
                 radioButton.text = listPilihanJawaban[indexKuis][i]
                 kuis_radiogrup.addView(radioButton)
             }

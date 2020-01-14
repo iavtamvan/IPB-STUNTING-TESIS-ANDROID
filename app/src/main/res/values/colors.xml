@@ -3,8 +3,9 @@
     <color name="colorPrimary">#ff80ab</color>
     <color name="colorPrimaryDark">#c94f7c</color>
     <color name="colorAccent">#ffb2dd</color>
+    <color name="rb">#FFFFFF</color>
 
-    <color name="White">#ffff</color>
+    <color name="White">#FFFFFF</color>
     <color name="transparant">#00CCCCCC</color>
     <color name="fbutton_color_turquoise">#1abc9c</color>
     <color name="fbutton_color_green_sea">#16a085</color>
