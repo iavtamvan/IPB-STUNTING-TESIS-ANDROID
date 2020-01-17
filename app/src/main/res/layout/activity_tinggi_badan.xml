@@ -43,6 +43,7 @@
                 android:textColor="@android:color/white"
                 android:hint="Berat badan sebelum ibu hamil"
                 android:id="@+id/edt_berat_badan"
+                android:visibility="gone"
                 android:textColorHint="@android:color/white"
                 android:inputType="number"/>
             <EditText

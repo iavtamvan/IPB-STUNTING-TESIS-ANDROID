@@ -48,20 +48,21 @@ public class TinggiBadanActivity extends AppCompatActivity {
                     edtTinggiBadan.setError("Isi dahulu");
                     tvStatus.setText("Status");
                 } else {
-                    tinggiBadanMeter = Double.valueOf(edtTinggiBadan.getText().toString()) / 100;
-                    bmi = (int) (Integer.parseInt(edtBeratBadan.getText().toString()) / (tinggiBadanMeter * tinggiBadanMeter));
-                    if (bmi < 18.5) {
-                        status = "Kekurangan berat badan";
-                        tvStatus.setText(status);
-                    } else if (bmi >= 18.6 && bmi <= 22.9) {
-                        status = "Berat badan normal";
-                        tvStatus.setText(status);
-                    } else if (bmi >= 23 && bmi <= 24.9) {
-                        status = "Kelebihan berat badan";
-                    } else {
-                        status = "Obesitas";
-                        tvStatus.setText(status);
-                    }
+//                    tinggiBadanMeter = Double.valueOf(edtTinggiBadan.getText().toString()) / 100;
+//                    bmi = (int) (Integer.parseInt(edtBeratBadan.getText().toString()) / (tinggiBadanMeter * tinggiBadanMeter));
+//                    if (bmi < 18.5) {
+//                        status = "Kekurangan berat badan";
+//                        tvStatus.setText(status);
+//                    } else if (bmi >= 18.6 && bmi <= 22.9) {
+//                        status = "Berat badan normal";
+//                        tvStatus.setText(status);
+//                    } else if (bmi >= 23 && bmi <= 24.9) {
+//                        status = "Kelebihan berat badan";
+//                    } else {
+//                        status = "Obesitas";
+//                        tvStatus.setText(status);
+//                    }
+                    tvStatus.setText(edtTinggiBadan.getText().toString().trim() + " Cm");
                 }
             }
 
