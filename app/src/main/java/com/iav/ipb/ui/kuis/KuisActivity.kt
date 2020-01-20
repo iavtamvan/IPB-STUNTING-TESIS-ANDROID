@@ -84,21 +84,23 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
             kuis_tv_nomer_soal.text = "Nomer Soal ${(indexKuis + 1)}"
             kuis_tv_soal.text = kuis
 
-            if (indexKuis==1){
-                kuis_edt.visibility = View.VISIBLE
-                kuis_radiogrup.visibility = View.GONE
-                kuis_tv_status.visibility = View.VISIBLE
-            }else{
+            /*TODO Un-comment when need edittext view*/
+//            if (indexKuis==1){
+//                kuis_edt.visibility = View.VISIBLE
+//                kuis_radiogrup.visibility = View.GONE
+//                kuis_tv_status.visibility = View.VISIBLE
+//            }else{
                 kuis_edt.visibility = View.GONE
                 kuis_radiogrup.visibility = View.VISIBLE
                 kuis_tv_status.visibility = View.GONE
-            }
+//            }
 
             for (i in 0 until listPilihanJawaban[indexKuis].size) {
                 val radioButton = RadioButton(this)
                 radioButton.id = i
                 radioButton.setTextColor(resources.getColor(R.color.White))
                 radioButton.text = listPilihanJawaban[indexKuis][i]
+                radioButton.textSize = 16f
                 kuis_radiogrup.addView(radioButton)
             }
 
@@ -109,11 +111,12 @@ class KuisActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View?) {
         when (view) {
             kuis_tv_lanjut -> {
-                if (indexKuis-1 == 1){
-                    checkEditText()
-                }else{
+                /*TODO Un-comment when need edittext view*/
+//                if (indexKuis-1 == 1){
+//                    checkEditText()
+//                }else{
                     checkedAnswerDefault()
-                }
+//                }
 
             }
         }

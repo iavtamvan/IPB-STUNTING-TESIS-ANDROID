@@ -17,7 +17,7 @@ object KuisData {
 
     var pilihanJawabanSoal = mutableListOf(
             mutableListOf("YA", "TIDAK"),
-            mutableListOf("< 20 tahun", "> 20 tahun dan < 35 tahun", "> 35 tahun"),
+            mutableListOf("Dibawah 20 tahun", "Antara 20 tahun sampai 35 tahun", "Di atas 35 tahun"),
             mutableListOf("YA", "TIDAK", "Kehamilan Pertama"),
             mutableListOf("YA", "TIDAK", "Kehamilan Pertama"),
             mutableListOf("Kurang dari 140/90 mmHg", "140/90 mmHg atau lebih"),
@@ -31,7 +31,7 @@ object KuisData {
 
     var titleDeskripsiJawabanSoal = mutableListOf(
             mutableListOf(null, "Karena ibu belum pernah melakukan pemerksaan ditempat pelayanan kesehatan"),
-            mutableListOf("Karena usia kurang dari 20 tahun atau lebih dari 35 tahun termasuk resiko tinggi pada kehamilan.", null, "Karena usia kurang dari 20 tahun atau lebih dari 35 tahun termasuk resiko tinggi pada kehamilan."),
+            mutableListOf("Karena usia kurang dari 20 tahun termasuk resiko tinggi pada kehamilan.", null, "Karena usia lebih dari 35 tahun termasuk resiko tinggi pada kehamilan."),
             mutableListOf("Karena melahirkan anak terlalu banyak atau lebih dari 4 orang termasuk resiko tinggi pada kehamilan.", null, null),
             mutableListOf("Karena jarak antara kehamilan sekarang dan sebelumnya kurang dari 2 tahun (24 bulan) termasuk resiko tinggi kehamilan.", null, null),
             mutableListOf(null, "Karena bisa mengalami hipertensi atau preeklamsa jika usia kehamilan sudah mencapai diatas 20 minggu"),
