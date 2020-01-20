@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.iav.ipb.R;
+import com.iav.ipb.ui.kuis.KuisActivity;
 
 public class TinggiBadanActivity extends AppCompatActivity {
 
@@ -47,21 +48,21 @@ public class TinggiBadanActivity extends AppCompatActivity {
                     edtTinggiBadan.setError("Isi dahulu");
                     tvStatus.setText("Status");
                 } else {
-                    tinggiBadanMeter = Double.valueOf(edtTinggiBadan.getText().toString()) / 100;
-                    bmi = (int) (Integer.parseInt(edtBeratBadan.getText().toString()) / (tinggiBadanMeter * tinggiBadanMeter));
-                    Toast.makeText(TinggiBadanActivity.this, "" + bmi, Toast.LENGTH_SHORT).show();
-                    if (bmi < 18.5) {
-                        status = "Kekurangan berat badan";
-                        tvStatus.setText(status);
-                    } else if (bmi >= 18.6 && bmi <= 22.9) {
-                        status = "Berat badan normal";
-                        tvStatus.setText(status);
-                    } else if (bmi >= 23 && bmi <= 24.9) {
-                        status = "Kelebihan berat badan";
-                    } else {
-                        status = "Obesitas";
-                        tvStatus.setText(status);
-                    }
+//                    tinggiBadanMeter = Double.valueOf(edtTinggiBadan.getText().toString()) / 100;
+//                    bmi = (int) (Integer.parseInt(edtBeratBadan.getText().toString()) / (tinggiBadanMeter * tinggiBadanMeter));
+//                    if (bmi < 18.5) {
+//                        status = "Kekurangan berat badan";
+//                        tvStatus.setText(status);
+//                    } else if (bmi >= 18.6 && bmi <= 22.9) {
+//                        status = "Berat badan normal";
+//                        tvStatus.setText(status);
+//                    } else if (bmi >= 23 && bmi <= 24.9) {
+//                        status = "Kelebihan berat badan";
+//                    } else {
+//                        status = "Obesitas";
+//                        tvStatus.setText(status);
+//                    }
+                    tvStatus.setText(edtTinggiBadan.getText().toString().trim() + " Cm");
                 }
             }
 
@@ -74,10 +75,13 @@ public class TinggiBadanActivity extends AppCompatActivity {
         btnLanjutTinggiBadan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), BeratBadanActivity.class);
-                intent.putExtra("BERAT_BADAN",  edtBeratBadan.getText().toString().trim());
-                startActivity(intent);
-
+                if (edtBeratBadan.getText().toString().isEmpty()){
+                    Toast.makeText(TinggiBadanActivity.this, "Lengkapi data dahulu", Toast.LENGTH_SHORT).show();
+                } else if (edtTinggiBadan.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(TinggiBadanActivity.this, "Lengkapi data dahulu", Toast.LENGTH_SHORT).show();
+                } else {
+                    startActivity(new Intent(getApplicationContext(), KuisActivity.class));
+                }
             }
         });
     }
