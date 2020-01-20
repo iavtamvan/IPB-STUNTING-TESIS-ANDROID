@@ -75,9 +75,7 @@ public class TinggiBadanActivity extends AppCompatActivity {
         btnLanjutTinggiBadan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (edtBeratBadan.getText().toString().isEmpty()){
-                    Toast.makeText(TinggiBadanActivity.this, "Lengkapi data dahulu", Toast.LENGTH_SHORT).show();
-                } else if (edtTinggiBadan.getText().toString().trim().isEmpty()) {
+                if (edtTinggiBadan.getText().toString().trim().isEmpty()) {
                     Toast.makeText(TinggiBadanActivity.this, "Lengkapi data dahulu", Toast.LENGTH_SHORT).show();
                 } else {
                     startActivity(new Intent(getApplicationContext(), KuisActivity.class));
