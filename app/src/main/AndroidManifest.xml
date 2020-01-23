@@ -13,9 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.ProfilActivity"></activity>
+        <activity android:name=".ui.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.ProfilActivity" />
         <activity android:name=".ui.UsiaKehamilanActivity" />
-        <activity android:name=".ui.TinggiBadanActivity"></activity>
+        <activity android:name=".ui.TinggiBadanActivity" />
         <activity android:name=".ui.kuis.DeskripsiActivity" />
         <activity android:name=".ui.BeratBadanActivity" />
         <activity android:name=".ui.intro.IntroSanitasiActivity" />
@@ -30,11 +37,6 @@
         <activity android:name=".ui.kuis.KuisActivity" />
         <activity android:name=".ui.MateriActivity" />
         <activity android:name=".ui.intro.SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ui.intro.IntroActivity" />
         <activity android:name=".ui.MenuActivity" />

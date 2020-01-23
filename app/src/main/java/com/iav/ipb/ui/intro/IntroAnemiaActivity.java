@@ -48,7 +48,7 @@ public class IntroAnemiaActivity extends AppCompatActivity {
         // layouts of all welcome sliders
         // add few more layouts if you want
         layouts = new int[]{
-                R.layout.sklider_0_8,
+                R.layout.sklider_0_20,
                 R.layout.sklider_8,
                 R.layout.sklider_9,
                 R.layout.sklider_10,

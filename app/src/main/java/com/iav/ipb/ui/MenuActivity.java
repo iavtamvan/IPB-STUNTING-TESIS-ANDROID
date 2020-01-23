@@ -38,7 +38,7 @@ public class MenuActivity extends AppCompatActivity {
         cvSkrining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), TinggiBadanActivity.class));
+                startActivity(new Intent(getApplicationContext(), KuisActivity.class));
             }
         });
 
